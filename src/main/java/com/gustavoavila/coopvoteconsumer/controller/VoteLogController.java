@@ -17,7 +17,7 @@ public class VoteLogController {
         this.voteLogService = voteLogService;
     }
 
-    @GetMapping("voting-log")
+    @GetMapping("voting-logs")
     public ResponseEntity<List<VoteLog>> getAll() {
         return ResponseEntity.ok(this.voteLogService.findAll());
     }
