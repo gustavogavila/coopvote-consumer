@@ -15,8 +15,6 @@ public class VoteConsumer {
 
     @RabbitListener(queues = "VOTE")
     private void consumer(String msg) {
-        System.out.println(msg);
-        System.out.println("---------------------");
         voteLogService.save(msg);
     }
 }
